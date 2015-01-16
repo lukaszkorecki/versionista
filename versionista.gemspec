@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Versionista::VERSION
   spec.authors       = ["Łukasz Korecki"]
   spec.email         = ["lukasz@korecki.me"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Simple VERSION file manager.}
+  spec.description   = %q{No fuss and extra features. Simply bump major/minor/patch version of your software stored in VERSION file. You can create it too}
   spec.homepage      = ""
   spec.license       = "MIT"
 
