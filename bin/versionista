@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+
+Versionista.from_args(ARGV).run
