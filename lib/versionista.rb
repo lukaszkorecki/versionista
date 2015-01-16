@@ -4,12 +4,14 @@ require 'optparse'
 require 'logger'
 
 module Versionista
+  VERSION = File.read(File.expand_path('../../VERSION', __FILE__))
+
   def self.from_args(args)
     options = {}
 
     optparse = OptionParser.new do |opts|
       opts.banner = <<-EOF
-      Versionista!
+      Versionista! #{VERSION}
 
 
       Manage version files. To get started run
