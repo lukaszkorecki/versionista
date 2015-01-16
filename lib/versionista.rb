@@ -1,5 +1,3 @@
-require 'versionista/version'
-
 require 'optparse'
 require 'logger'
 
@@ -16,21 +14,23 @@ module Versionista
 
       Manage version files. To get started run
 
-        versionista --init --version-file ./path/to/File
+      $ versionista --init --version-file ./path/to/File
       EOF
-      opts.on('--version-file FILE', 'Path to version file') do |file|
+        .gsub(/^\s*/,'')
+
+      opts.on('-f', '--version-file FILE', 'Path to version file') do |file|
         options[:file] = File.expand_path(file)
       end
 
-      opts.on('--bump WHICH', 'Bump: major/minor/patch') do |which|
+      opts.on('-b', '--bump WHICH', 'Bump: major/minor/patch') do |which|
         options[:which] = which
       end
 
-      opts.on('--init', 'Initialize version file') do
+      opts.on('-i', '--init', 'Initialize version file') do
         options[:init] = true
       end
 
-      opts.on('-h', 'halp') do
+      opts.on('-h', '--help', 'halp') do
         puts opts
         exit 0
       end
